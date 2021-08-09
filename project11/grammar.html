@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Grammar for Arithmetic Expressions</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1138.51">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier}
+  </style>
+</head>
+<body>
+<p class="p1"><br></p>
+<p class="p2">In the following grammar</p>
+<p class="p1"><br></p>
+<p class="p2"><span class="Apple-converted-space">    </span>=<span class="Apple-converted-space">    </span>means "is defined as"</p>
+<p class="p2"><span class="Apple-converted-space">    </span>" "<span class="Apple-converted-space">  </span>enclose literal items</p>
+<p class="p2"><span class="Apple-converted-space">    </span>[ ]<span class="Apple-converted-space">  </span>enclose items which may be omitted</p>
+<p class="p2"><span class="Apple-converted-space">    </span>{ }<span class="Apple-converted-space">  </span>enclose items which may appear zero or more times</p>
+<p class="p2"><span class="Apple-converted-space">    </span>|<span class="Apple-converted-space">    </span>indicates a choice</p>
+<p class="p2"><span class="Apple-converted-space">    </span>( )<span class="Apple-converted-space">  </span>are used for grouping required choices</p>
+<p class="p1"><br></p>
+<p class="p2">expression =<span class="Apple-converted-space">  </span>term { addingOperator term }</p>
+<p class="p1"><br></p>
+<p class="p2">term = factor { multiplyingOperator factor }</p>
+<p class="p1"><br></p>
+<p class="p2">factor = primary [ "^" factor ]</p>
+<p class="p1"><br></p>
+<p class="p2">primary = numericLiteral | "(" expression ")"</p>
+<p class="p1"><br></p>
+<p class="p2">addingOperator = "+" | "-"</p>
+<p class="p1"><br></p>
+<p class="p2">multiplyingOperator = "*" | "/" | "%"</p>
+<p class="p1"><br></p>
+<p class="p2">numericLiteral = digit { digit }</p>
+<p class="p1"><br></p>
+<p class="p2">digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"</p>
+<p class="p1"><br></p>
+</body>
+</html>
